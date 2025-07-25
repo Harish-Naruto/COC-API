@@ -1,9 +1,9 @@
-import { createAchievement, getAchievements, getAchievementById, updateAchievementById, deleteAchievementById, removeMemberFromAchievement } from '../src/controllers/achievement.controller';
-import * as achievementService from '../src/services/achievement.service';
-import { uploadImage } from '../src/utils/imageUtils';
-import { ApiError } from '../src/utils/apiError';
+import { createAchievement, getAchievements, getAchievementById, updateAchievementById, deleteAchievementById, removeMemberFromAchievement } from '../api/controllers/achievement.controller';
+import * as achievementService from '../api/services/achievement.service';
+import { uploadImage } from '../api/utils/imageUtils';
+import { ApiError } from '../api/utils/apiError';
 
-jest.mock('../src/app', () => ({
+jest.mock('../api/app', () => ({
   supabase: {
     storage: {
       from: jest.fn(() => ({
@@ -15,14 +15,14 @@ jest.mock('../src/app', () => ({
 }));
 
 
-jest.mock('../src/routes/achievements', () => {
+jest.mock('../api/routes/achievements', () => {
   return {
     __esModule: true,
     default: jest.fn(() => require('express').Router()),
   };
 });
 
-jest.mock('../src/utils/imageUtils', () => ({
+jest.mock('../api/utils/imageUtils', () => ({
   uploadImage: jest.fn(),
 }));
 

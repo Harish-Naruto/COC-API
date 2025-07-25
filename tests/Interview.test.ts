@@ -1,7 +1,7 @@
-import { getInterviews, getInterviewById, createInterview, updateInterviewById, deleteInterviewById} from '../src/controllers/interview.controller';
-import * as interviewService from '../src/services/interview.service';
-import { ApiError } from '../src/utils/apiError';
-import { Verdict } from '../src/generated/prisma';
+import { getInterviews, getInterviewById, createInterview, updateInterviewById, deleteInterviewById} from '../api/controllers/interview.controller';
+import * as interviewService from '../api/services/interview.service';
+import { ApiError } from '../api/utils/apiError';
+import { Verdict } from '../api/generated/prisma';
 
 describe('getInterviews', () => {
   it('should return 200 and all interviews', async () => {

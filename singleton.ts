@@ -11,7 +11,7 @@ jest.mock("./src/db/client", () => {
   };
 });
 
-import { prisma } from "./src/db/client";
+import { prisma } from "./api/db/client";
 
 export const prismaMock = prisma as unknown as DeepMockProxy<PrismaClient>;
 

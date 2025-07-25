@@ -1,6 +1,6 @@
-import { uploadImage, deleteImage } from "../src/utils/imageUtils";
+import { uploadImage, deleteImage } from "../api/utils/imageUtils";
 import { SupabaseClient, PostgrestError } from "@supabase/supabase-js";
-import { ApiError } from "../src/utils/apiError";
+import { ApiError } from "../api/utils/apiError";
 import { v4 as uuidv4 } from "uuid";
 
 jest.mock("uuid");

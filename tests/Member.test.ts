@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import { createAMember, updateAMember } from '../src/controllers/member.controller';
-import * as memberService from '../src/services/member.service';
-import { ApiError } from '../src/utils/apiError';
+import { createAMember, updateAMember } from '../api/controllers/member.controller';
+import * as memberService from '../api/services/member.service';
+import { ApiError } from '../api/utils/apiError';
 import { SupabaseClient } from '@supabase/supabase-js';
-import { uploadImage } from '../src/utils/imageUtils';
+import { uploadImage } from '../api/utils/imageUtils';
 
-jest.mock('../src/db/client', () => ({
+jest.mock('../api/db/client', () => ({
   prisma: {
     member: {
       findUnique: jest.fn(),
@@ -16,7 +16,7 @@ jest.mock('../src/db/client', () => ({
   },
 }));
 
-jest.mock('../src/utils/imageUtils');
+jest.mock('../api/utils/imageUtils');
 const mockSupabase = {} as SupabaseClient;
 
 const mockResponse = (): Response => {

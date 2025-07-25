@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
-import * as questionServices from "../src/services/question.service";
+import * as questionServices from "../api/services/question.service";
 import {
   getQuestionByTopicId,
   addQuestion,
   getQuestionByQuestionId,
   updateQuestion,
   deleteQuestion,
-} from "../src/controllers/question.controller";
-import { Question } from "../src/generated/prisma";
-import { ApiError } from "../src/utils/apiError";
+} from "../api/controllers/question.controller";
+import { Question } from "../api/generated/prisma";
+import { ApiError } from "../api/utils/apiError";
 
 beforeEach(() => {
   jest.clearAllMocks();

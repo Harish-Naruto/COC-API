@@ -3,10 +3,10 @@ import {
   createTopic,
   updateTopic,
   deleteTopic,
-} from "../src/controllers/topic.controller";
-import * as topicServices from "../src/services/topic.service";
-import { ApiError } from "../src/utils/apiError";
-import { Topic } from "../src/generated/prisma";
+} from "../api/controllers/topic.controller";
+import * as topicServices from "../api/services/topic.service";
+import { ApiError } from "../api/utils/apiError";
+import { Topic } from "../api/generated/prisma";
 
 beforeEach(() => {
   jest.clearAllMocks();

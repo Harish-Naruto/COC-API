@@ -10,6 +10,6 @@
     "sort": true
   },
   "output": "docs/apidoc",
-  "input": "src/routes",
+  "input": "api/routes",
   "includeFilters": ["\\.ts$"]
 }

@@ -1,13 +1,13 @@
 import { createProject  , getProjectById , updateProjects , deleteProjects
-   , getMembersByProjectId , addMembers , removeMembers} from '../src/controllers/project.controller';
+   , getMembersByProjectId , addMembers , removeMembers} from '../api/controllers/project.controller';
    
-import * as projectService from '../src/services/project.service';
-import { ApiError } from '../src/utils/apiError';
+import * as projectService from '../api/services/project.service';
+import { ApiError } from '../api/utils/apiError';
 import { Response , Request} from 'express';
-import * as imageUtils from '../src/utils/imageUtils';
+import * as imageUtils from '../api/utils/imageUtils';
 
 
-jest.mock('../src/app', () => ({
+jest.mock('../api/app', () => ({
   supabase: {
     storage: {
       from: jest.fn(() => ({
@@ -21,7 +21,7 @@ jest.mock('../src/app', () => ({
 }));
 
 // Mock image upload utility
-jest.mock('../src/utils/imageUtils', () => ({
+jest.mock('../api/utils/imageUtils', () => ({
   uploadImage: jest.fn().mockResolvedValue('https://fake-url.com/projects/image.png'),
 }));
 

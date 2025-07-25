@@ -1,11 +1,11 @@
 import {
   getCompletedQuestion,
   toggleQuestions,
-} from "../src/controllers/progress.controller";
-import * as progressServices from "../src/services/progress.service";
+} from "../api/controllers/progress.controller";
+import * as progressServices from "../api/services/progress.service";
 import { Request, Response } from "express";
-import { CompletedQuestion } from "../src/generated/prisma";
-import { ApiError } from "../src/utils/apiError";
+import { CompletedQuestion } from "../api/generated/prisma";
+import { ApiError } from "../api/utils/apiError";
 
 beforeEach(() => {
   jest.clearAllMocks();
