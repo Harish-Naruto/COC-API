@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "apidoc": "apidoc -c apidoc.json",
-    "start": "bun api/server.ts",
+    "dev": "bun api/server.ts",
     "lint": "eslint api/",
     "format": "prettier --write api/",
     "lint:fix": "eslint api/ --fix",
